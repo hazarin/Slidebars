@@ -1,6 +1,6 @@
 /*!
  * Slidebars - A jQuery Framework for Off-Canvas Menus and Sidebars
- * Version: 2.0.2
+ * Version: 2 Development
  * Url: http://www.adchsm.com/slidebars/
  * Author: Adam Charles Smith
  * Author url: http://www.adchsm.com/
@@ -217,8 +217,13 @@ var slidebars = function () {
 			throw "Slidebars hasn't been initialized.";
 		}
 
-		// Check if id wasn't passed or if Slidebar isn't registered
-		if ( ! id || ! isRegisteredSlidebar( id ) ) {
+		// Check if id wasn't passed
+		if ( ! id ) {
+			throw "You must pass a Slidebar id.";
+		}
+
+		// Check if Slidebar is registered
+		if ( ! isRegisteredSlidebar( id ) ) {
 			throw "Error opening Slidebar, there is no Slidebar with id '" + id + "'.";
 		}
 
@@ -324,8 +329,13 @@ var slidebars = function () {
 			throw "Slidebars hasn't been initialized.";
 		}
 
-		// Check if id wasn't passed or if Slidebar isn't registered
-		if ( ! id || ! isRegisteredSlidebar( id ) ) {
+		// Check if id wasn't passed
+		if ( ! id ) {
+			throw "You must pass a Slidebar id.";
+		}
+
+		// Check if Slidebar is registered
+		if ( ! isRegisteredSlidebar( id ) ) {
 			throw "Error toggling Slidebar, there is no Slidebar with id '" + id + "'.";
 		}
 
@@ -353,7 +363,7 @@ var slidebars = function () {
 	 * Active States
 	 */
 
-	this.isActive = function ( id ) {
+	this.isActive = function () {
 		// Return init state
 		return init;
 	};
@@ -438,7 +448,7 @@ var slidebars = function () {
 		}
 
 		// Check if Slidebar is registered
-		if ( ! id || ! isRegisteredSlidebar( id ) ) {
+		if ( ! isRegisteredSlidebar( id ) ) {
 			throw "Error retrieving Slidebar, there is no Slidebar with id '" + id + "'.";
 		}
 

@@ -261,10 +261,11 @@ var slidebars = function () {
 
 		// Call open, close open Slidebar if active
 		if ( this.getActiveSlidebar() && this.getActiveSlidebar() !== id ) {
-			this.close( open );
+			// this.close( open );
 		} else {
 			open();
 		}
+		open();
 	};
 
 	this.close = function ( id, callback ) {
