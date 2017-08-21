@@ -260,6 +260,7 @@ var slidebars = function () {
 		} else {
 			open();
 		}
+		open();
 	};
 
 	this.close = function ( id, callback ) {
